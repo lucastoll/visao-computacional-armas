@@ -1,0 +1,31 @@
+# Configurações de Augmentation para YOLO
+# Este arquivo contém todas as opções de augmentation para o treinamento YOLO
+
+# Ativa augmentations (recomendado para datasets pequenos)
+augment: True
+
+# HSV Augmentation (ajustes de cor)
+hsv_h: 0.015 # HSV hue augmentation (fraction) - ajuste de matiz
+hsv_s: 0.7 # HSV saturation augmentation (fraction) - ajuste de saturação
+hsv_v: 0.4 # HSV value augmentation (fraction) - ajuste de brilho
+
+# Transformações Geométricas
+degrees: 0.0 # Image rotation (degrees) - rotação da imagem
+translate: 0.1 # Image translation (fraction) - translação da imagem
+scale: 0.5 # Image scale (linear) - escala da imagem
+shear: 0.0 # Image shear (degrees) - cisalhamento da imagem
+perspective: 0.0 # Image perspective (applied to all four corners) - perspectiva
+
+# Flip (Espelhamento)
+flipud: 0.0 # Flip image upside down (probability) - espelhar verticalmente
+fliplr: 0.5 # Flip image left-right (probability) - espelhar horizontalmente
+
+# Augmentations Avançadas
+mosaic: 1.0 # Mosaic augmentation (probability) - combina 4 imagens em uma
+mixup: 0.0 # Mixup augmentation (probability) - mistura duas imagens
+copy_paste: 0.0 # Copy-paste augmentation (probability) - copia objetos de uma imagem para outra
+
+# Outras Augmentations
+erasing: 0.4 # Random erasing (probability) - apaga partes aleatórias da imagem (útil para datasets pequenos)
+crop_fraction: 0.8 # Crop fraction - fração onde o objeto aparece parcialmente (DEPRECATED - será removido no futuro)
+
